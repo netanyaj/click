@@ -175,6 +175,7 @@ def prompt(
     show_default: bool | str = True,
     err: bool = False,
     show_choices: bool = True,
+    prompt_hint: str | None = None,
 ) -> V:
     """Prompts a user for input.  This is a convenience function that can
     be used to prompt a user for input later.
@@ -204,6 +205,8 @@ def prompt(
                          For example if type is a Choice of either day or week,
                          show_choices is true and text is "Group by" then the
                          prompt will be "Group by (day, week): ".
+    :param prompt_hint: an optional hint appended to the prompt to suggest
+        the expected input format without changing the default value.
 
     .. versionchanged:: 8.5.0
         Generically typed: the return type is narrowed by ``type``,
@@ -249,6 +252,9 @@ def prompt(
     prompt = _build_prompt(
         text, prompt_suffix, show_default, default, show_choices, type
     )
+
+    if prompt_hint is not None:
+        prompt = f"{prompt} [{prompt_hint}]"
 
     if confirmation_prompt:
         if confirmation_prompt is True:
