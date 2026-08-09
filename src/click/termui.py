@@ -57,7 +57,9 @@ _ansi_reset_all = "\033[0m"
 _HIDDEN_INPUT_MASK = "'***'"
 
 
-def _mask_hidden_input(message: str, value: str) -> str:
+def _mask_hidden_input(
+    message: str, value: str, replacement: str | None = None
+) -> str:
     """Replace occurrences of ``value`` in ``message`` with a fixed mask.
 
     Both ``repr(value)`` (the form built-in :class:`ParamType` errors use
@@ -67,10 +69,12 @@ def _mask_hidden_input(message: str, value: str) -> str:
     ``"Authentication"``. The empty string is skipped to avoid matching
     at every boundary.
     """
-    message = message.replace(repr(value), _HIDDEN_INPUT_MASK)
+    replacement = _HIDDEN_INPUT_MASK if replacement is None else replacement
+    repr_replacement = replacement if replacement is _HIDDEN_INPUT_MASK else repr(replacement)
+    message = message.replace(repr(value), repr_replacement)
     if value:
         message = re.sub(
-            rf"(?<!\w){re.escape(value)}(?!\w)", _HIDDEN_INPUT_MASK, message
+            rf"(?<!\w){re.escape(value)}(?!\w)", replacement, message
         )
     return message
 

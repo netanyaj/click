@@ -40,6 +40,29 @@ def test_prompt_default_validated_by_type(capfd, monkeypatch):
     assert value == 7
 
 
+<<<<<<< HEAD
+=======
+def test_mask_hidden_input_accepts_custom_replacement():
+    message = "value=secret and repr('secret')"
+    masked = click.termui._mask_hidden_input(message, "secret", replacement="[redacted]")
+    assert masked == "value=[redacted] and repr('[redacted]')"
+
+
+def test_confirm_abort_on_no_flag(monkeypatch):
+    monkeypatch.setattr(sys, "stdin", StringIO("n\n"))
+
+    with pytest.raises(click.Abort):
+        click.confirm("Do you want to continue?", abort_on_no=True)
+
+
+def test_confirm_legacy_abort_alias(monkeypatch):
+    monkeypatch.setattr(sys, "stdin", StringIO("n\n"))
+
+    with pytest.raises(click.Abort):
+        click.confirm("Do you want to continue?", abort=True)
+
+
+>>>>>>> 3f24fb6 (changing an internal, undocumented helper)
 @pytest.mark.skipif(WIN, reason="Different behavior on windows.")
 def test_prompts_abort(monkeypatch, capsys):
     def f(_):
