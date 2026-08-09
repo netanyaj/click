@@ -288,7 +288,7 @@ def prompt(
 def confirm(
     text: str,
     default: bool | None = False,
-    abort: bool = False,
+    abort_on_no: bool = False,
     prompt_suffix: str = ": ",
     show_default: bool = True,
     err: bool = False,
@@ -301,12 +301,12 @@ def confirm(
     :param text: the question to ask.
     :param default: The default value to use when no input is given. If
         ``None``, repeat until input is given.
-    :param abort: if this is set to `True` a negative answer aborts the
-                  exception by raising :exc:`Abort`.
+    :param abort_on_no: if this is set to ``True`` a negative answer aborts
+        the exception by raising :exc:`Abort`.
     :param prompt_suffix: a suffix that should be added to the prompt.
     :param show_default: shows or hides the default value in the prompt.
     :param err: if set to true the file defaults to ``stderr`` instead of
-                ``stdout``, the same as with echo.
+        ``stdout``, the same as with echo.
 
     .. versionchanged:: 8.3.1
         A space is no longer appended to the prompt.
@@ -339,10 +339,9 @@ def confirm(
             echo(_("Error: invalid input"), err=err)
             continue
         break
-    if abort and not rv:
+    if abort_on_no and not rv:
         raise Abort()
     return rv
-
 
 def get_pager_file(
     color: bool | None = None,
