@@ -20,6 +20,6 @@ jobs:
           # once one does (see Security below)
         with:
           llm_api_key: ${{ secrets.OPENROUTER_API_KEY }}
-          docs_path: "docs/quickstart.md,docs/commands.md,docs/commands-and-groups.md,docs/options.md,docs/parameters.md,docs/arguments.md,docs/prompts.md"
+          docs_path: "docs"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
