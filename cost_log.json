@@ -101,6 +101,23 @@
       },
       "total_tokens": 2424,
       "total_cost_usd": 0.006922
+    },
+    {
+      "model": "openai/gpt-4o",
+      "verifier": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0
+      },
+      "corrector": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0
+      },
+      "validator": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0
+      },
+      "total_tokens": 0,
+      "total_cost_usd": 0.0
     }
   ]
 }
