@@ -84,6 +84,14 @@ only accept floats:
 value = click.prompt('Please enter a number', default=42.0)
 ```
 
+For prompts that need a little more guidance, you can pass a `prompt_hint` to show an example value without changing the
+actual default. This is especially helpful when describing an input format that the user should follow but that still
+needs to remain editable:
+
+```python
+value = click.prompt('Please enter a package name', prompt_hint='my-package')
+```
+
 ## Optional Prompts
 
 If the option has `prompt` enabled, then setting `prompt_required=False` tells Click to only show the prompt if the
@@ -123,6 +131,10 @@ There is also the option to make the function automatically abort the execution 
 ```python
 click.confirm('Do you want to continue?', abort=True)
 ```
+
+The same `prompt_hint` idea also works for confirmation-style prompts when you want to make the expected value more
+obvious without switching to a different prompt API. A short hint can clarify whether the user should enter a value like
+`yes`, `no`, or a slightly longer example that matches the surrounding workflow.
 
 ## Dynamic Defaults for Prompts
 
