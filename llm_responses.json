@@ -54,5 +54,13 @@
   "862f8e4d3e4d4cb9668368a9e24550868e22d75c5c12a7531fa0ac9d8f7e5e50": {
     "stale": false,
     "diagnosis": "The documentation section describes Unicode support for input and output on Windows, which is unrelated to the addition of the 'prompt_hint' parameter in the code. The new parameter does not affect the Unicode handling described in the documentation."
+  },
+  "41f2c8fd54f10691e8b7885eeac2ee8134d534056a8930d4ead4d9b8767249a5": {
+    "stale": false,
+    "diagnosis": "The documentation accurately describes the behavior of the confirm function, including the abort functionality. The code change does not affect the documented behavior, as it only introduces a conditional assignment that does not alter the function's logic or output."
+  },
+  "22aa38596d7ca019a4d1c7f92dfe3abdfddf1ff63c2aa46a5f17c2d9e260a033": {
+    "stale": false,
+    "diagnosis": "The documentation describes the general behavior of option prompts and does not detail the internal logic of the 'confirm' function. The change in the code regarding the 'abort' parameter does not affect the accuracy of the documentation, which remains focused on the usage of prompts in Click."
   }
 }
