@@ -146,6 +146,7 @@ def prompt(
     show_default: bool | str = True,
     err: bool = False,
     show_choices: bool = True,
+    placeholder: str | None = None,
 ) -> str: ...
 
 
@@ -161,6 +162,7 @@ def prompt(
     show_default: bool | str = True,
     err: bool = False,
     show_choices: bool = True,
+    placeholder: str | None = None,
 ) -> V: ...
 
 
@@ -175,6 +177,7 @@ def prompt(
     show_default: bool | str = True,
     err: bool = False,
     show_choices: bool = True,
+    placeholder: str | None = None,
 ) -> V:
     """Prompts a user for input.  This is a convenience function that can
     be used to prompt a user for input later.
@@ -204,6 +207,8 @@ def prompt(
                          For example if type is a Choice of either day or week,
                          show_choices is true and text is "Group by" then the
                          prompt will be "Group by (day, week): ".
+    :param placeholder: an optional hint shown in the prompt to suggest
+        the expected input format without changing the default value.
 
     .. versionchanged:: 8.5.0
         Generically typed: the return type is narrowed by ``type``,
@@ -249,6 +254,9 @@ def prompt(
     prompt = _build_prompt(
         text, prompt_suffix, show_default, default, show_choices, type
     )
+
+    if placeholder is not None:
+        prompt = f"{prompt} [{placeholder}]"
 
     if confirmation_prompt:
         if confirmation_prompt is True:
@@ -317,6 +325,9 @@ def confirm(
     .. versionadded:: 4.0
         Added the ``err`` parameter.
     """
+    if abort is not None:
+        abort_on_no = abort
+
     prompt = _build_prompt(
         text,
         prompt_suffix,
