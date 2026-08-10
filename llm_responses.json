@@ -1,0 +1,58 @@
+{
+  "0dddf3541a6cf9bf3037f0980fa978c45231be0e75069a33e4c6aeeb1adc3e25": {
+    "stale": true,
+    "diagnosis": "The documentation uses the parameter 'abort', which has been renamed to 'abort_on_no' in the new code. This makes the example in the documentation incorrect."
+  },
+  "b058dea0988ade773f576cb5cd63e21cf61b434c674d5dda1f71c5d049a808b2": {
+    "stale": false,
+    "diagnosis": "The documentation does not reference the 'abort' parameter directly, so the change to 'abort_on_no' does not affect its accuracy. The section describes general behavior of option prompts, which remains unchanged."
+  },
+  "b6004f79192bbfb57ee50d5271509aaa1eb872b8df539f849e239c2ed1c9c651": {
+    "stale": false,
+    "diagnosis": "The documentation section does not describe the prompt function directly, so the addition of the 'placeholder' parameter does not affect its accuracy. The section focuses on file opening behaviors, which remain unchanged by the code update."
+  },
+  "e691fe5f786b2085efcfe0368d6c37ffef5e97e245e53f43ecec1edf964dc104": {
+    "stale": false,
+    "diagnosis": "The documentation does not mention the 'placeholder' parameter, but it still accurately describes the behavior of the 'prompt' function regarding input types and defaults. The addition of 'placeholder' does not contradict or invalidate the existing documentation."
+  },
+  "aec505609404e88f770f6f5c2795112e979f66ac4d8dc4b95a3906dd111ac5dc": {
+    "stale": false,
+    "diagnosis": "The documentation does not mention the 'placeholder' parameter, but it does not contradict the new code. The existing documentation remains accurate regarding the general behavior of the prompt function."
+  },
+  "c7e2f57c57b1bb6943e1b8f0b72ca1f3b2349570592511777b2fe26be33826f3": {
+    "stale": false,
+    "diagnosis": "The documentation section describes the behavior of optional prompts in Click, which is unrelated to the changes in the code. The addition of the 'placeholder' parameter in the code does not affect the described behavior of 'prompt_required' or 'required' options in the documentation."
+  },
+  "58be1e1cae57f558f4305abad3af930146998a75d0d92d5c0c4f2e543f9f40c0": {
+    "stale": false,
+    "diagnosis": "The documentation section describes Unicode support for input and output on Windows, which is unrelated to the addition of the 'placeholder' parameter in the new code. The documentation remains accurate regarding Unicode handling and is not affected by the code change."
+  },
+  "c9e18a7dd76ed15d5cc5f4fdebbe1dda36756e8c60b295ef9e5770f772b257f0": {
+    "stale": true,
+    "diagnosis": "The documentation uses the 'abort' parameter to demonstrate automatic abortion on a negative response, but the new code has changed this parameter to 'abort_on_no'. The example in the documentation is now incorrect."
+  },
+  "983a6e0d729d7404d574af27eb2bd4036a69e0d2a8c657e8591bbad481bef0f4": {
+    "stale": false,
+    "diagnosis": "The documentation section does not specifically describe the parameters or behavior of the 'confirm' function, so the changes to parameter names and logic in the code do not affect its accuracy. The section remains accurate as it discusses general usage of prompts in Click."
+  },
+  "27774cd5330573e1663ea8cceaa62b143ceb2573f865e17628bf204d4cd94cfd": {
+    "stale": false,
+    "diagnosis": "The documentation section does not describe the prompt function directly, so the addition of the prompt_hint parameter does not affect its accuracy. The documentation remains relevant to file opening behaviors, not the prompt function."
+  },
+  "f38133393840f69b6417481cf3d3bfe02c6c5685f4011a81188b3d6a859ced83": {
+    "stale": false,
+    "diagnosis": "The documentation accurately describes the new 'prompt_hint' parameter, which was added in the code. It provides examples of how to use 'prompt_hint', aligning with the new code functionality."
+  },
+  "3633398a99b538273265c33896a0207fa75a7d0f940c3da2b2272d611c222757": {
+    "stale": false,
+    "diagnosis": "The documentation does not mention the 'prompt_hint' parameter, but it does not contradict the new code. The existing documentation remains accurate regarding the general behavior of the prompt function."
+  },
+  "919c9bde41ea0e7061486f4141488f6efa8c7586d3920d4f30e37313a32ccd90": {
+    "stale": false,
+    "diagnosis": "The documentation section describes the behavior of optional prompts with Click options, which is unrelated to the changes in the prompt function. The addition of the 'prompt_hint' parameter does not affect the accuracy of this documentation section."
+  },
+  "862f8e4d3e4d4cb9668368a9e24550868e22d75c5c12a7531fa0ac9d8f7e5e50": {
+    "stale": false,
+    "diagnosis": "The documentation section describes Unicode support for input and output on Windows, which is unrelated to the addition of the 'prompt_hint' parameter in the code. The new parameter does not affect the Unicode handling described in the documentation."
+  }
+}

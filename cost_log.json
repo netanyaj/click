@@ -1,0 +1,106 @@
+{
+  "runs": [
+    {
+      "model": "openai/gpt-4o",
+      "verifier": {
+        "prompt_tokens": 3102,
+        "completion_tokens": 111
+      },
+      "corrector": {
+        "prompt_tokens": 1137,
+        "completion_tokens": 69
+      },
+      "validator": {
+        "prompt_tokens": 1186,
+        "completion_tokens": 65
+      },
+      "total_tokens": 5670,
+      "total_cost_usd": 0.016012
+    },
+    {
+      "model": "openai/gpt-4o",
+      "verifier": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0
+      },
+      "corrector": {
+        "prompt_tokens": 1165,
+        "completion_tokens": 69
+      },
+      "validator": {
+        "prompt_tokens": 1172,
+        "completion_tokens": 47
+      },
+      "total_tokens": 2453,
+      "total_cost_usd": 0.007003
+    },
+    {
+      "model": "openai/gpt-4o",
+      "verifier": {
+        "prompt_tokens": 17494,
+        "completion_tokens": 437
+      },
+      "corrector": {
+        "prompt_tokens": 1168,
+        "completion_tokens": 68
+      },
+      "validator": {
+        "prompt_tokens": 1223,
+        "completion_tokens": 63
+      },
+      "total_tokens": 20453,
+      "total_cost_usd": 0.055393
+    },
+    {
+      "model": "openai/gpt-4o",
+      "verifier": {
+        "prompt_tokens": 14473,
+        "completion_tokens": 285
+      },
+      "corrector": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0
+      },
+      "validator": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0
+      },
+      "total_tokens": 14758,
+      "total_cost_usd": 0.039032
+    },
+    {
+      "model": "openai/gpt-4o",
+      "verifier": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0
+      },
+      "corrector": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0
+      },
+      "validator": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0
+      },
+      "total_tokens": 0,
+      "total_cost_usd": 0.0
+    },
+    {
+      "model": "openai/gpt-4o",
+      "verifier": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0
+      },
+      "corrector": {
+        "prompt_tokens": 1137,
+        "completion_tokens": 68
+      },
+      "validator": {
+        "prompt_tokens": 1172,
+        "completion_tokens": 47
+      },
+      "total_tokens": 2424,
+      "total_cost_usd": 0.006922
+    }
+  ]
+}
